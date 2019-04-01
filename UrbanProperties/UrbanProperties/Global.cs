@@ -11,7 +11,7 @@ namespace UrbanProperties
     public partial class MainWindow: MetroWindow
     {
         public static string DatabaseconnStringPoolingTrue = @"Server=" + "localhost" + ";Port=3306;Database='test';Uid=root;Pwd=" +
-                "pass" + ";Pooling=true;";
+                "allgo" + ";Pooling=true;";
 
 
         public static void AddSpaceDetails(SpaceEntity space)

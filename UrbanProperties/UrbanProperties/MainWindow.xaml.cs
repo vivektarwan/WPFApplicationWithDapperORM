@@ -154,11 +154,11 @@ namespace UrbanProperties
                 switch(temp.Type)
                 {
                     case 0:
-                        Space space = new Space();
+                        EmptySpace space = new EmptySpace();
                         space.Name = temp.Name;
                         space.SquareFeet = temp.SquareFeet;
                         space.Type = temp.Type;
-                        temp.Price = space.CalculatePrice();
+                        temp.Price = space.Price;
                         tempListWithPrice.Add(temp);
                         break;
                     case 1:
@@ -166,11 +166,11 @@ namespace UrbanProperties
                         cspace.Name = temp.Name;
                         cspace.SquareFeet = temp.SquareFeet;
                         cspace.Type = temp.Type;
-                        cspace.No_of_cabins = temp.No_of_cabins;
-                        cspace.No_of_seats = temp.No_of_seats;
-                        cspace.No_of_floors = temp.No_of_floors;
-                        cspace.No_of_toilets = temp.No_of_toilets;
-                        temp.Price = cspace.CalculatePrice();
+                        cspace.SetNoOfCabins(temp.No_of_cabins);
+                        cspace.SetNoOfSeats(temp.No_of_seats);
+                        cspace.SetNoOfFloors(temp.No_of_floors);
+                        cspace.SetNoOfToilets(temp.No_of_toilets);
+                        temp.Price = cspace.Price;
                         tempListWithPrice.Add(temp);
                         break;
                     case 2:
@@ -178,19 +178,19 @@ namespace UrbanProperties
                         rspace.Name = temp.Name;
                         rspace.SquareFeet = temp.SquareFeet;
                         rspace.Type = temp.Type;
-                        rspace.No_of_rooms = temp.No_of_rooms;
-                        rspace.No_of_kitchens = temp.No_of_kitchens;
-                        rspace.No_of_floors = temp.No_of_floors;
-                        rspace.No_of_toilets = temp.No_of_toilets;
-                        temp.Price = rspace.CalculatePrice();
+                        rspace.SetNoOfRooms(temp.No_of_rooms);
+                        rspace.SetNoOfKitchens(temp.No_of_kitchens);
+                        rspace.SetNoOfFloors(temp.No_of_floors);
+                        rspace.SetNoOfToilets(temp.No_of_toilets);
+                        temp.Price = rspace.Price;
                         tempListWithPrice.Add(temp);
                         break;
                     default:
-                        Space dspace = new Space();
+                        EmptySpace dspace = new EmptySpace();
                         dspace.Name = temp.Name;
                         dspace.SquareFeet = temp.SquareFeet;
                         dspace.Type = temp.Type;
-                        temp.Price = dspace.CalculatePrice();
+                        temp.Price = dspace.Price;
                         tempListWithPrice.Add(temp);
                         break;
 
